@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import countrySliceReducer from "./coutriesSlice/countrySlice";
+import roomReducer from "../redux/booking/roomSlice"
 
 const store = configureStore({
   reducer: {
-    countries: countrySliceReducer,
+    room: roomReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
 export default store;
