@@ -2,32 +2,36 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { fetchDetails } from "../../redux/booking/roomSlice"
-import { SlLike, BsFillGearFill } from "react-icons/bs";
-import { FaChevronLeft, FaMicrophone } from 'react-icons/fa';
+import { BsFillGearFill } from "react-icons/bs";
+import { FaChevronLeft, FaMicrophone, FaStar, FaThumbsUp   } from 'react-icons/fa';
+import "./Room.scss";
+
 
 
 const RoomInfo = () => {
-    const { searchId, roomDetials, detailLoading} = useSelector((store) => store.room);
+    const { searchId, roomDetails, detailLoading} = useSelector((store) => store.room);
+
+    const backgroundImage = roomDetails.rooms.photos[0]?.url_original;
 
     const dispatch = useDispatch();
     const params = useParams();
 
     useEffect(() => {
         dispatch(fetchDetails({ hotel_id: params.id, searchId}));
-    }, [dispatch]);
+    }, [dispatch, params.id, searchId]);
 
     const renderInfo = () => (
         <ul>
-            {roomDetials.rooms.photos.map((photo, i) => {
+            {roomDetails.rooms.photos.map((photo, i) => {
                 if(i > 0) {
                     return(
                         <li key={photo?.url_original}>
                             <img src={photo?.url_original} alt="room-photo" />
                             <div>
-                                <p>{roomDetials.rooms.facilities[i]?.name}</p>
-                                <p>{roomDetials.rooms.highlights[i]?.translated_name}</p>
-                                <div>
-                                    <SlLike />
+                                <p>{roomDetails.rooms.facilities[i]?.name}</p>
+                                <p>{roomDetails.rooms.highlights[i]?.translated_name}</p>
+                                <div className="thumb">
+                                    <FaThumbsUp  />
                                     <p>{Number(Math.random() * (300 - 1) + 1).toFixed(0)}</p>
                                 </div>
                             </div>
@@ -40,50 +44,63 @@ const RoomInfo = () => {
     );
 
     if (detailLoading) return <p>Room details are loading ...</p>
+
   return (
     <div>
-        <ul>
+        <ul className="info-navbar">
             <li>
-                <Link to="/">
-                    <p>
+                <Link to="/" className="back">
+                    <p className="back-icon">
                      <FaChevronLeft />
                     </p>
                     <p>Back to Home</p>
                 </Link>
             </li>
-            <li>{roomDetials.hotel_name.split(' ')[0]}</li>
-            <li>
+            <li className="h-name">{roomDetails.hotel_name.split(' ')[0]}</li>
+            <li className="nav-icons">
              <FaMicrophone />
              <BsFillGearFill />
             </li>
         </ul>
         <div>
             <div>
-                <div>
-                    <p>
-                        {`${roomDetials.distance_to_cc.toFixed(2)} km`}
-                    </p>
-                    <p>Distance to city</p>
-                    <p>
-                        {`${roomDetials.composite_price_breakdown.net_amount.value.toFixed(
-                            2,
-                        )} ${roomDetials.composite_price_breakdown.net_amount.currency}`}
-                    </p>
-                    <p>Price per night</p>
+                <div
+                    className="background-image"
+                    style={{ backgroundImage: `url(${backgroundImage})` }}
+                >
+                    <div className="main-bg">
+                        <div className="disc-1">
+                        <p>Distance to city:</p>
+                        <p>{`${roomDetails.distance_to_cc.toFixed(2)} km,`}</p>
+                        <p>Price per night:</p>
+                        <p>
+                            {`${roomDetails.composite_price_breakdown.net_amount.value.toFixed(2)} ${roomDetails.composite_price_breakdown.net_amount.currency}`}
+                        </p>
+                        </div>
+                        <div className="disc-2">
+                        <p>Country:</p>
+                        <p>{roomDetails.country_trans},</p>
+                        <p>Area in Square Meters:</p>
+                        <p>{`${roomDetails.average_room_size_for_ufi_m2} sqm`}</p>
+                        </div>
+                        <div className="disc-3">
+                        <p>{`Rating${roomDetails.breakfast_review_score?.review_score} / 10`}</p>
+                        <p>
+                            <FaStar />
+                        </p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p>
-                        {roomDetials.country_trans}
-                    </p>
-                    <p>{`${roomDetials.average_room_size_for_ufi_m2}`}</p>
-                    <p>Squre Meter</p>
-                </div>
-                <p>{`Rating${roomDetials.breakfast_review_score?.review_score} / 10`}</p>
             </div>
-            <img src={roomDetials.rooms.photo[0]?.url_original} alt="hotal-room" />
         </div>
-        <div>{roomDetials.hotel_name}</div>
-        {renderInfo()}    
+        <div>
+            {roomDetails.hotel_name}
+        </div>
+        <div className="disc-4">
+            <div>
+                {renderInfo()}  
+            </div>
+        </div>
     </div>
   );
 };

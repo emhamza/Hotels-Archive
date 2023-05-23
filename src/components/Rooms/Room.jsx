@@ -9,9 +9,6 @@ const Room = ({ room }) => (
             <div className="single-card">
                 <div>
                     <img src={room.main_photo_url} alt="Hotel Picture" className="room-img" />
-                    <div className="arrow-icon">
-                        <BsArrowRightCircle  />
-                    </div>
                 </div>
                 <div className="card-text">
                     <p>
@@ -20,6 +17,9 @@ const Room = ({ room }) => (
                     <p>
                         {room.hotel_facilities?.split(",").length}
                     </p>
+                </div>
+                <div className="arrow-icon">
+                        <BsArrowRightCircle  />
                 </div>
             </div>
     </Link>

@@ -35,8 +35,6 @@ function App() {
       ? rooms.filter((room) => room.accommodation_type_name === list)
       : rooms;
 
-      console.log(shortListedRooms);
-
   return (
     <>
       <ul className="navbar"> 

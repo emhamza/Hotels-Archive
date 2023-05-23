@@ -9,7 +9,7 @@ ul {
   font-weight: bold;
   padding-left: 0;
   margin: -0.47rem -0.47rem 1rem -0.47rem;
-  background-color: #da3283;
+  background-color: #fe3595;
 }
 
 .navbar li {
@@ -17,7 +17,7 @@ ul {
 }
 
 .cover-img {
-  width: 20%;
+  width: 30%;
 }
 
 .cover-container {
@@ -26,8 +26,9 @@ ul {
 }
 
 .cover-container p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-top: 8%;
+  padding-left: 2%;
   font-style: italic;
 }
 
@@ -36,7 +37,7 @@ ul {
   align-items: center;
   padding: 0.5rem;
   margin: 0 -0.47rem 1rem -0.47rem;
-  background-color: #da3283;
+  background-color: #fe3595;
 }
 
 .catergory-sel p {
@@ -47,7 +48,7 @@ ul {
   margin-left: 1rem;
   width: 20%;
   margin-top: 0.45rem;
-  background-color: #da3283;
+  background-color: #fe3595;
   border: 1px solid white;
   border-radius: 0.1rem;
   color: white;
@@ -55,5 +56,5 @@ ul {
 
 .room-card {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }

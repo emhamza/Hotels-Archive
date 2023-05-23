@@ -41,7 +41,7 @@ export const fetchRooms = createAsyncThunk('rooms/get', async () => {
     return res.data;
 });
 
-export const fetchDetails = createAsyncThunk('room/detial', async (payload) => {
+export const fetchDetails = createAsyncThunk('room/details', async (payload) => {
     const res = await axios.request({
         method: 'GET',
         url: 'https://apidojo-booking-v1.p.rapidapi.com/properties/detail',
@@ -101,11 +101,11 @@ const roomSlice = createSlice({
 
         //For the room details
         builder.addCase(fetchDetails.pending, (state) => {
-            state.isLoading = true;
+            state.detailLoading = true;
         });
 
         builder.addCase(fetchDetails.fulfilled, (state, {payload}) => {
-            state.isLoading = false;
+            state.detailLoading = false;
             const shortListedDetails = {};
 
             shortListedDetails.hotel_name = payload.hotel_name;
@@ -117,10 +117,10 @@ const roomSlice = createSlice({
             shortListedDetails.breakfast_review_score = payload.breakfast_review_score;
 
             state.roomDetails = shortListedDetails;
-            localStorage.setItem('roomDetails', JSON.stringify(shortListedDetails));
+            // localStorage.setItem('roomDetails', JSON.stringify(shortListedDetails));
         });
         builder.addCase(fetchDetails.rejected, (state, {payload}) => {
-            state.isLoading = false;
+            state.detailLoading = false;
             state.error = payload
         });
     },
