@@ -52,9 +52,9 @@ function App() {
         </p>
       </div>
       <div className="catergory-sel">
-        {rooms && rooms.length > 0 && rooms.forEach((rm) => {
-          if (!categories.includes(rm.accommodation_type_name)) {
-            categories.push(rm.accommodation_type_name);
+        {rooms && rooms.length > 0 && rooms.forEach((rom) => {
+          if (!categories.includes(rom.accommodation_type_name)) {
+            categories.push(rom.accommodation_type_name);
           }
         })}
         <p>Choose Hotel by Category</p>

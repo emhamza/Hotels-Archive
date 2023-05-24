@@ -11,8 +11,6 @@ import "./Room.scss";
 const RoomInfo = () => {
     const { searchId, roomDetails, detailLoading} = useSelector((store) => store.room);
 
-    const backgroundImage = roomDetails.rooms.photos[0]?.url_original;
-
     const dispatch = useDispatch();
     const params = useParams();
 
@@ -43,7 +41,7 @@ const RoomInfo = () => {
         </ul>
     );
 
-    if (detailLoading) return <p>Room details are loading ...</p>
+    if (detailLoading) return <div data-testid="loading-message">Room details are loading ...</div>
 
   return (
     <div>
@@ -66,7 +64,6 @@ const RoomInfo = () => {
             <div>
                 <div
                     className="background-image"
-                    style={{ backgroundImage: `url(${backgroundImage})` }}
                 >
                     <div className="main-bg">
                         <div className="disc-1">

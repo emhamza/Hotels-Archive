@@ -3,7 +3,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>React Space-X App</b></h3>
+  <h3><b>Hotels Archive</b></h3>
 
 </div>
 
@@ -28,8 +28,8 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [React Space-X App] <a name="about-project"></a>
-The SpaceX app, developed using React and Redux, offers an immersive experience for space enthusiasts by seamlessly fetching data from an API that provides detailed information about different rockets and missions. Users can explore the app's extensive database, learning about the technical specifications, historical achievements, and future plans of SpaceX. Moreover, the app incorporates a user-friendly booking functionality, divided into three separate pages, allowing users to reserve seats for upcoming missions, track their bookings, and stay up to date with launch schedules. With its intuitive interface and comprehensive features, the SpaceX app brings the wonders of space exploration to the fingertips of users, offering a captivating journey through the realm of SpaceX's ambitious ventures.
+# 📖 [Hotels Archive] <a name="about-project"></a>
+Hotels Archive is a professional Vite + React app that serves as a centralized platform for accessing comprehensive information about hotels worldwide. Utilizing the power of Redux store, the app seamlessly navigates between two pages, providing users with a user-friendly interface to search, filter, and explore hotels based on their preferences. With real-time data integration from the Rapid API, users can access up-to-date details, including images, descriptions, amenities, ratings, reviews, and contact information for each hotel. Whether planning a vacation or seeking exposure for their properties, Hotels Archive offers a valuable resource for travelers and hoteliers alike, revolutionizing the way hotels are discovered and showcased.
 ## 🛠 Built With <a name="built-with"></a>
 
 -React & Redux
@@ -65,8 +65,9 @@ The SpaceX app, developed using React and Redux, offers an immersive experience 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
--[<a href="https://space-x-jln2.onrender.com" target="_blank">Online version</a>](#)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-Will be available soon---
+<!-- -[<a href="https://space-x-jln2.onrender.com" target="_blank">Online version</a>](#)
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -90,7 +91,7 @@ Example command:
 
 ```sh
   cd my-folder
-  git clone: (https://github.com/emhamza/Space-X)
+  git clone: (https://github.com/emhamza/Hotels-Archive)
 ```
 
 ### Install
@@ -160,7 +161,7 @@ GitHub Pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the https://github.com/emhamza/Space-X/issues
+Feel free to check the https://github.com/emhamza/Hotels-Archive/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,6 +179,6 @@ I would like to thank Microvers for this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/emhamza/react-redux-capstone/blob/development/LICENSE) licensed.
+This project is [MIT](https://github.com/emhamza/Hotels-Archive/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
