@@ -1,4 +1,3 @@
-import { test, describe, expect } from 'vitest';
 import configureStore from 'redux-mock-store';
 
 describe('Room Details', () => {
