@@ -1,0 +1,98 @@
+a {
+  text-decoration: none;
+}
+
+.single-card {
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  margin: 1%;
+  box-shadow: 100px 42px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.room-img {
+  width: 40%;
+  padding: 2% 28%;
+}
+
+.arrow-icon {
+  font-size: 1rem;
+  padding-left: 4.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: small;
+  padding: 0 0 0 1rem;
+}
+
+//info page
+
+.info-navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 0;
+  margin: -0.47rem -0.47rem 1rem -0.47rem;
+  background-color: #fe3595;
+
+  .back {
+    display: flex;
+    color: white;
+  }
+
+  .back-icon {
+    margin-right: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  .h-name,
+  .nav-icons {
+    margin-top: 1.2rem;
+  }
+
+  .nav-icons {
+    padding: 0 1rem;
+  }
+}
+
+.disc-1,
+.disc-2 {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+}
+
+.disc-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.disc-4 {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+}
+
+.background-image {
+  background-image: url('../../assets/bg-hotel-card.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main-bg {
+  background-color: #fe3595;
+  opacity: 85%;
+}
+
+.thumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: -1rem;
+}
