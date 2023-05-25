@@ -59,7 +59,7 @@ function App() {
         })}
         <p>Choose Hotel by Category</p>
         <select value={list} onChange={(e) => { setList(e.target.value)}}>
-          <option>All</option>
+          <option value="">All</option>
           {categories.map((category) => (
             <option value={category} key={category}>
               {category}

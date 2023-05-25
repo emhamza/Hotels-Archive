@@ -65,9 +65,8 @@ Hotels Archive is a professional Vite + React app that serves as a centralized p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
--Will be available soon---
-<!-- -[<a href="https://space-x-jln2.onrender.com" target="_blank">Online version</a>](#)
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+-[<a href="https://hotels-archive.onrender.com/" target="_blank">Online version</a>](#)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
