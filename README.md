@@ -174,11 +174,12 @@ If you like this project then please follow me on Linkedin, Twitter and GitHub. 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microvers for this project!
+I would also like to thank Nelson Sakwa on Behance, for the amazing theme!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/emhamza/Hotels-Archive/LICENSE) licensed.
+This project is [MIT](https://github.com/emhamza/Hotels-Archive/blob/capstone-3/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
